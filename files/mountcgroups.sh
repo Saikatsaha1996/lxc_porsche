@@ -16,7 +16,7 @@ mkdir /sys/fs/cgroup/blkio
 mkdir /sys/fs/cgroup/systemd
 
 # Mount cgroups subsystem folders
-mount -t cgroup cgroup -o none,name=systemd /sys/fs/cgroup/systemd
+mount -t cgroup -o name=systemd cgroup /sys/fs/cgroup/systemd
 mount -t cgroup cpu -o cpu /sys/fs/cgroup/cpu
 mount -t cgroup cpuacct -o cpuacct /sys/fs/cgroup/cpuacct
 mount -t cpuset cpuset -o cpuset /sys/fs/cgroup/cpuset
